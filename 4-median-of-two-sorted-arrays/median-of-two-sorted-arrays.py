@@ -3,13 +3,11 @@ class Solution:
 
         l = sorted(nums1 + nums2)
 
-        if l != []:
+        length = len(l)
+        median = (
+            l[length // 2]
+            if len(l) % 2 != 0
+            else (l[int((length / 2) - 1)] + l[int((length / 2))]) / 2
+        )
 
-            length = len(l)
-            median = (
-                l[length // 2]
-                if len(l) % 2 != 0
-                else (l[int((length / 2) - 1)] + l[int((length / 2))]) / 2
-            )
-
-            return median
+        return median
