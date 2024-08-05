@@ -6,17 +6,10 @@ class Solution:
         if l != []:
 
             length = len(l)
-            median = l[length // 2] if len(l) % 2 != 0 else (l[int((length / 2) - 1)] + l[int((length / 2) )]) / 2
+            median = (
+                l[length // 2]
+                if len(l) % 2 != 0
+                else (l[int((length / 2) - 1)] + l[int((length / 2))]) / 2
+            )
 
             return median
-
-
-
-        return sum(medians) / len(medians)
-    
-
-
-
-         
-
-        
